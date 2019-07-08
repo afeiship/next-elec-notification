@@ -1,17 +1,12 @@
-(function () {
+(function() {
   var nx = require('next-js-core2');
   var NxElecNotification = require('../src/next-elec-notification');
 
-  describe('NxElecNotification.methods', function () {
-    test('init', function () {
-      var data = {
-        key: 1,
-        value: 2
-      };
-      // console.log(rs1, rs2);
+  describe('NxElecNotification.methods', function() {
+    test('init', function() {
+      var notification = new NxElecNotification();
 
-      // expect(rs1).toBe(true);
-
+      notification.notify({ message: 'test' });
     });
   });
-}());
+})();
