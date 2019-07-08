@@ -1,0 +1,26 @@
+{
+  "name": "next-elec-notification",
+  "description": "Notification for electron based on nodeNotifier",
+  "main": "dist/next-elec-notification.js",
+  "authors": [
+    "afei"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "next"
+  ],
+  "homepage": "https://github.com/afeiship/next-elec-notification",
+  "moduleType": [
+    "amd"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "src",
+    "build",
+    "gulpfile.js"
+  ]
+}
