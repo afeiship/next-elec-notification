@@ -10,8 +10,11 @@
 
   var NxElecNotification = nx.declare('nx.ElecNotification', {
     methods: {
+      init: function(inOptions) {
+        this.options = nx.mix(null, DEFAULT_OPTIONS, inOptions);
+      },
       notify: function(inOptions) {
-        const options = nx.mix(null, DEFAULT_OPTIONS, inOptions);
+        const options = nx.mix(this.options, inOptions);
         return new Promise(function(resolve, reject) {
           notifier.notify(options, function(err, response, data) {
             if (!err) {

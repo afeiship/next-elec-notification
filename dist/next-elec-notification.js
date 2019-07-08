@@ -2,7 +2,7 @@
  * name: next-elec-notification
  * url: https://github.com/afeiship/next-elec-notification
  * version: 1.0.0
- * date: 2019-07-08T14:10:02.177Z
+ * date: 2019-07-08T14:15:53.107Z
  * license: MIT
  */
 
@@ -18,8 +18,11 @@
 
   var NxElecNotification = nx.declare('nx.ElecNotification', {
     methods: {
+      init: function(inOptions) {
+        this.options = nx.mix(null, DEFAULT_OPTIONS, inOptions);
+      },
       notify: function(inOptions) {
-        const options = nx.mix(null, DEFAULT_OPTIONS, inOptions);
+        const options = nx.mix(this.options, inOptions);
         return new Promise(function(resolve, reject) {
           notifier.notify(options, function(err, response, data) {
             if (!err) {
